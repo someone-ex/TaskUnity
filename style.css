@@ -29,6 +29,20 @@ html {
   scroll-padding-top: 6rem;
 }
 
+.logo {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically */
+}
+
+.logo-text {
+  margin-left: 10px; /* Add some space between the image and text */
+  color: #fff;
+}
+
+.logo-text:hover {
+  color: #000;
+}
+
 body {
   background: #f7f7f7;
 }
@@ -92,30 +106,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: linear-gradient(to right, #723EA8, #3C2842);
   padding: 2rem 9%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+
+
 header .logo {
   font-size: 2.5rem;
   font-weight: bolder;
-  color: #666;
+  color: #fff;
 }
 
 header .logo i {
   padding-right: 0.5rem;
-  color: var(--indigo);
+  color: #fff;
 }
 
 header .navbar a {
   font-size: 2rem;
   margin-left: 2rem;
-  color: #666;
+  color: #fff;
 }
 
 header .navbar a:hover {
-  color: var(--indigo);
+  color: #000;
 }
 
 #menu-bar {
@@ -289,9 +305,23 @@ header .navbar a:hover {
 }
 
 .steps .box img {
+  width: 250px; /* Set the desired width */
+  height: 250px; /* Set the desired height */
   border-radius: 50%;
-  border: 1rem solid #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  animation: floatAnimation 3s ease infinite; /* Apply animation */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .steps .box h3 {
@@ -299,6 +329,7 @@ header .navbar a:hover {
   color: #333;
   padding: 1rem;
 }
+
 
 .gallery .box-container {
   display: flex;
